@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">>
-    <!--android:background="@drawable/photo_1555037015_1498966bcd7c"-->
+    tools:context=".AboutActivity">
 
     <TextView
         android:id="@+id/diseaseName"
@@ -17,12 +16,39 @@
         android:textSize="30dp"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Information:"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="110dp"
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/treat"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="320dp"
+        android:text="Treatment:"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textSize="25dp" />
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/treatment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="360dp"
         android:gravity="center_horizontal"
         android:scrollbars="vertical"
         android:textAlignment="center"
