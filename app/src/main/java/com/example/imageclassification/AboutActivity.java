@@ -6,20 +6,23 @@ import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
-    TextView diseaseName,description;
+    TextView diseaseName,treatment,information;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
         diseaseName=findViewById(R.id.diseaseName);
-        description=findViewById(R.id.description);
-
+        treatment=findViewById(R.id.treatment);
+        information=findViewById(R.id.information);
         String disease = getIntent().getStringExtra("diseaseName");
-        String descript = getIntent().getStringExtra("description");
+        String info = getIntent().getStringExtra("information");
+        String treat = getIntent().getStringExtra("treatment");
 
         diseaseName.setText(disease);
-        description.setText(descript);
-        description.setMovementMethod(new ScrollingMovementMethod());
+        information.setText(info);
+        information.setMovementMethod(new ScrollingMovementMethod());
+        treatment.setText(treat);
+        treatment.setMovementMethod(new ScrollingMovementMethod());
     }
 }

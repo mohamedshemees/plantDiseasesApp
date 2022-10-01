@@ -177,13 +177,20 @@ public class TomatoActivity extends AppCompatActivity {
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        String result;
+                        String information;
+                        String treatment;
                         if(documentSnapshot.exists()){
-                            result = documentSnapshot.getString(text);
-                            Intent intent = new Intent(TomatoActivity.this,AboutActivity.class);
-                            intent.putExtra("diseaseName",text);
-                            intent.putExtra("description",result);
-                            startActivity(intent);
+                            if(text == null){
+                                Toast.makeText(getApplicationContext(),"you should predict first",Toast.LENGTH_LONG).show();
+                            }else{
+                                information = documentSnapshot.getString(text);
+                                treatment = documentSnapshot.getString("treatment_"+text);
+                                Intent intent = new Intent(TomatoActivity.this,AboutActivity.class);
+                                intent.putExtra("diseaseName",text);
+                                intent.putExtra("information",information);
+                                intent.putExtra("treatment",treatment);
+                                startActivity(intent);
+                            }
                         }else{
                             Toast.makeText(getApplicationContext(),"Row not found",Toast.LENGTH_LONG).show();
                         }
