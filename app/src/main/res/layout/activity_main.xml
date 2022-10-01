@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">>
+     <!--android:background="@drawable/photo_1555037015_1498966bcd7c"-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:text="imageClassificationApp"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/wheatbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="WheatDisease" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PotatoDisease"
+        android:layout_below="@id/wheatbtn"
+        android:id="@+id/potatoBtn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TomatoDisease"
+        android:layout_below="@id/potatoBtn"
+        android:id="@+id/tomatoBtn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PaperDisease"
+        android:layout_below="@id/tomatoBtn"
+        android:id="@+id/paperBtn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
