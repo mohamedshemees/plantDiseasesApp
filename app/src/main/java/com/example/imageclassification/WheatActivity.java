@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.imageclassification.ml.ConvertedModel;
 import com.example.imageclassification.ml.MobilenetV110224Quant;
+import com.example.imageclassification.ml.PepperModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
@@ -93,22 +94,21 @@ public class WheatActivity extends AppCompatActivity {
                 try {
                     ConvertedModel model = ConvertedModel.newInstance(WheatActivity.this);
 
-                    // Creates inputs for reference.
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
-                    bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
-
-                    TensorImage image=new TensorImage(DataType.FLOAT32);
-                    image.load(bitmap);
-                    inputFeature0.loadBuffer(image.getBuffer());
-                    // Runs model inference and gets result.
-                    ConvertedModel.Outputs outputs = model.process(inputFeature0);
-                    TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
-                    result.setText(labels[getMax(outputFeature0.getFloatArray())] +"") ;
-                    text = String.valueOf(result.getText());
-                    System.out.print(text);
-
-                    // Releases model resources if no longer used.
-                    model.close();
+                    if(bitmap==null){
+                        Toast.makeText(getApplicationContext(),"you should pick image first",Toast.LENGTH_LONG).show();
+                    }else{
+                        TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
+                        bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
+                        TensorImage image=new TensorImage(DataType.FLOAT32);
+                        image.load(bitmap);
+                        inputFeature0.loadBuffer(image.getBuffer());
+                        // Runs model inference and gets result.
+                        ConvertedModel.Outputs outputs = model.process(inputFeature0);
+                        TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+                        result.setText(labels[getMax(outputFeature0.getFloatArray())] +"") ;
+                        text = String.valueOf(result.getText());
+                        model.close();
+                    }
                 } catch (IOException e) {
                     // TODO Handle the exception
                 }

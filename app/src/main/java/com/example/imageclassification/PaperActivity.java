@@ -96,22 +96,22 @@ public class PaperActivity extends AppCompatActivity {
                 try {
                     PepperModel model = PepperModel.newInstance(PaperActivity.this);
 
-                    // Creates inputs for reference.
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
-                    bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
+                    if(bitmap==null){
+                        Toast.makeText(getApplicationContext(),"you should pick image first",Toast.LENGTH_LONG).show();
+                    }else{
+                        TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
+                        bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
+                        TensorImage image=new TensorImage(DataType.FLOAT32);
+                        image.load(bitmap);
+                        inputFeature0.loadBuffer(image.getBuffer());
+                        // Runs model inference and gets result.
+                        PepperModel.Outputs outputs = model.process(inputFeature0);
+                        TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+                        result.setText(labels[getMax(outputFeature0.getFloatArray())] +"") ;
+                        text = String.valueOf(result.getText());
+                        model.close();
+                    }
 
-                    TensorImage image=new TensorImage(DataType.FLOAT32);
-                    image.load(bitmap);
-                    inputFeature0.loadBuffer(image.getBuffer());
-                    // Runs model inference and gets result.
-                    PepperModel.Outputs outputs = model.process(inputFeature0);
-                    TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
-                    result.setText(labels[getMax(outputFeature0.getFloatArray())] +"") ;
-                    text = String.valueOf(result.getText());
-                    System.out.print(text);
-
-                    // Releases model resources if no longer used.
-                    model.close();
                 } catch (IOException e) {
                     // TODO Handle the exception
                 }
