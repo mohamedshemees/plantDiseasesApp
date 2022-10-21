@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_6"
+
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/diseaseName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#42855B"
+        android:textSize="30dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:text="Information:"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textSize="22dp"
+        android:textColor="#357C3C"
+        />
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="25dp"
+        android:textAlignment="textStart"
+        android:scrollbars="vertical"
+        android:textSize="16dp"
+        android:background="@drawable/round_btn"
+        android:elevation="2dp"
+        android:paddingLeft="8dp"
+        android:lineHeight="20dp"
+        />
+    <TextView
+        android:id="@+id/treat"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="322dp"
+        android:layout_marginLeft="10dp"
+        android:text="Treatment:"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textSize="22dp"
+        android:textColor="#357C3C"
+        />
+
+    <TextView
+        android:id="@+id/treatment"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="25dp"
+        android:scrollbars="vertical"
+        android:textSize="16dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/round_btn"
+        android:elevation="2dp"
+        android:paddingLeft="8dp"
+        android:lineHeight="20dp"
+        />
+</RelativeLayout>
