@@ -1,0 +1,10 @@
+brown rust
+Fusarium Head Blight
+Healthy Wheat
+Healthy_1 
+Healthy_2
+Leaf Rust
+Tan Spot
+Yellow_rust_3
+septoria_1
+stripe_rust_1

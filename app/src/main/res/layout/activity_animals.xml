@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:layout_height="40dp"
+        android:text="Animals Diseases"
+        android:textColor="#323232"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_below="@id/title"-->
+<!--        android:text="Choose your animal:"-->
+<!--        android:id="@+id/choose"-->
+<!--        android:textSize="22dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="270dp"/>-->
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_btn_categories"
+        android:layout_centerHorizontal="true">
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/blue_background_cow3"
+            app:shapeAppearanceOverlay="@style/roundimageview"
+            />
+
+        <Button
+            android:id="@+id/cowbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:width="120dp"
+            android:background="@drawable/round_btn_categories"
+            android:fontFamily="sans-serif-black"
+            android:text="Cow \nDiseases"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+    </RelativeLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/cowbtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/title"-->
+<!--        android:text="Cow Disease"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="330dp"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:backgroundTint="#42855B"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:width="150dp" />-->
+
+
+</RelativeLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="200dp"
+        android:text="Cow Diseases"
+        android:textColor="#323232"
+        android:textSize="28dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <ImageView
+        android:id="@+id/lefSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/left_side_blue"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="215dp"
+        android:layout_height="258dp"
+        android:layout_below="@id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="480dp"
+        android:background="@drawable/imageview_design_blue"
+        android:paddingTop="4.5dp"
+        android:paddingBottom="4.5dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/round_btn_categories"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gallery4"
+            app:shapeAppearanceOverlay="@style/roundimageview"
+            />
+
+        <Button
+            android:id="@+id/selectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-3dp"
+            android:width="200dp"
+            android:background="@drawable/round_btn_categories"
+            android:fontFamily="sans-serif-black"
+            android:text="Select \nImage"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/round_btn_categories"
+        >
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera3"
+            app:shapeAppearanceOverlay="@style/roundimageview"
+            />
+
+        <Button
+            android:id="@+id/captureBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/selectBtn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-3dp"
+            android:width="200dp"
+            android:background="@drawable/round_btn_categories"
+            android:fontFamily="sans-serif-black"
+            android:text="Capture"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/round_btn_categories"
+        >
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/lamp3"
+            app:shapeAppearanceOverlay="@style/roundimageview"
+            />
+
+        <Button
+            android:id="@+id/predictBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/captureBtn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-3dp"
+            android:width="200dp"
+            android:background="@drawable/round_btn_categories"
+            android:fontFamily="sans-serif-black"
+            android:text="predict"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/round_btn_categories"
+        >
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:src="@drawable/info5"
+            app:shapeAppearanceOverlay="@style/roundimageview"
+            />
+
+        <Button
+            android:id="@+id/aboutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="about"
+            android:layout_below="@id/predictBtn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-3dp"
+            android:width="200dp"
+            android:background="@drawable/round_btn_categories"
+            android:fontFamily="sans-serif-black"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/selectBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/imageView"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Select Image"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:backgroundTint="#42855B"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:width="150dp" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Capture"-->
+<!--        android:layout_below="@id/selectBtn"-->
+<!--        android:id="@+id/captureBtn"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:backgroundTint="#42855B"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:width="150dp"-->
+<!--        />-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="predict"-->
+<!--        android:layout_below="@id/captureBtn"-->
+<!--        android:id="@+id/predictBtn"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:backgroundTint="#42855B"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:width="150dp"-->
+<!--        />-->
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="about"-->
+<!--        android:layout_below="@id/predictBtn"-->
+<!--        android:id="@+id/aboutBtn"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:backgroundTint="#42855B"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:width="150dp"-->
+<!--        />-->
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center_horizontal"
+        android:text="result:\n "
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
